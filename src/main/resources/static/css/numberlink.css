@@ -1,0 +1,313 @@
+body {
+
+    background-image: url("/images/background_linku.jpg");
+}
+
+h1 {
+    color: #dd2246;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 3.5rem;
+}
+
+.simpleBtn {
+    background-color: #dd2246;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btnLogin {
+    background: linear-gradient(45deg, #ff2a2a, #084fff);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.blocks {
+    display: flex;
+}
+
+.right_content, .left_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.right_content {
+    flex: 60%;
+    padding-right: 15rem;
+    padding-left: 10rem;
+}
+
+.left_content {
+    flex: 40%;
+    padding-left: 10rem;
+    padding-right: 5rem;
+}
+
+.menuButtons {
+    display: inline;
+    margin-top: 1rem;
+}
+
+.gameState {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.field {
+    margin-top: 0.5rem;
+}
+
+.field td, .field tr {
+    font-size: 2rem;
+    border: 1.5px solid black;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 15%;
+    text-decoration: none;
+    color: black;
+}
+
+.readOnlyNumber-1, .readOnlyNumber-2, .readOnlyNumber-3, .readOnlyNumber-4, .readOnlyNumber-5 {
+    font-weight: bold;
+}
+
+.correctNumber-1, .readOnlyNumber-1 {
+    background-color: #f8f806;
+}
+
+.correctNumber-2, .readOnlyNumber-2 {
+    background-color: #f35cef;
+}
+
+.correctNumber-3, .readOnlyNumber-3 {
+    background-color: #ff5353;
+}
+
+.correctNumber-4, .readOnlyNumber-4 {
+    background-color: #07e607;
+}
+
+.correctNumber-5, .readOnlyNumber-5 {
+    background-color: #ff9833;
+}
+
+.notMarked {
+    background-color: #d5d5d5;
+}
+
+.field td a {
+    text-decoration: none;
+    color: black;
+}
+
+.time, .score {
+    margin-top: 5px;
+    padding: 0px;
+    font-size: 1.5rem;
+}
+
+.aboutGame .welcomeHead {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutGame {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.aboutGame h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.acutalUser {
+    font-style: italic;
+    color: blue;
+}
+
+.top_scores {
+    margin-top: 2.5rem;
+}
+
+.scoresTable td, .scoresTable tr {
+    font-size: 1.3rem;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.scoresTable th {
+    font-size: 1.7rem;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    background-color: #97d3d8;
+    border-radius: 0.3rem;
+}
+
+.scoresTable .paired {
+    background-color: #e4e4e4;
+}
+
+.scoresTable .unpaired {
+    background-color: #d5d5d5;
+}
+
+.rating {
+    display: flex;
+    gap:2rem;
+}
+
+.infoRating, .formRating form {
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.formRating form {
+    align-items: center;
+}
+
+.stars {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: flex;
+    align-items: flex-start;
+    line-height: 2rem;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    font-size: 2rem;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+.stars input[type="radio"]:checked ~ label, .stars label:hover, .stars label:hover ~ label {
+    color: black;
+}
+
+.average, .userRating {
+    margin-top: 5px;
+    padding: 0px;
+    font-size: 1.5rem;
+}
+
+.btnSubmit input[type="submit"] {
+    all: unset;
+    background-color: #07e607;
+    color: black;
+    font-size: 1rem;
+    padding: 1.5px;
+    border-radius: 0.3rem;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.comments {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comments form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.comments input[type="text"] {
+    all: unset;
+    border: black solid 1px;
+    padding: 1rem;
+    background:  #e4e4e4;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.comment-box {
+    border: black solid 1px;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    background-color: #e4e4e4;
+    border-radius: 0.3rem;
+}
+
+.playerDate {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-player {
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.comment-date {
+    font-size: 1rem;
+}
+
+.comment-text {
+    margin-top: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.readComments {
+    all: unset;
+    background-color: #07e607;
+    color: black;
+    font-size: 1rem;
+    padding: 1.5px;
+    border-radius: 0.3rem;
+    display: inline-flex;
+    height: 30px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.top_scores p {
+    font-size: 1.2rem;
+}

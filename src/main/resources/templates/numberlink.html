@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numberlink TUKE</title>
+    <link rel="stylesheet" href="/css/numberlink.css">
+</head>
+<body>
+
+<h1>NUMBERLINK</h1>
+
+<div class="blocks">
+    <div class="left_content">
+        <div class="menuButtons">
+            <a href="/numberlink/new" class="simpleBtn">New game</a>
+        </div>
+        <div class="gameState">
+            <div class="time" th:utext="${@numberLinkController.time}">
+            </div>
+            <div class="score" th:utext="${@numberLinkController.score}">
+            </div>
+        </div>
+        <div class="field" th:utext="${@numberLinkController.htmlField}">
+        </div>
+        <div class="top_scores">
+            <div class="scoresTable" th:utext="${@numberLinkController.topScores}"></div>
+        </div>
+    </div>
+
+    <div class="right_content">
+        <div class="menuButtons">
+            <a href="/numberlink/login" class="btnLogin" th:if="${username==null}">Login</a>
+            <a href="/numberlink/logout" class="btnLogin" th:if="${username!=null}">Logout</a>
+        </div>
+        <div class="aboutGame">
+            <h2 class="welcomeHead" th:if="${username!=null}">Welcome, <span th:text="${username}" class="acutalUser">User</span>, to the game NumberLink!</h2>
+            <h2 class="welcomeHead" th:if="${username==null}"> Welcome to the game Numberlink! </h2>
+            <div class="rating">
+                <div class="infoRating">
+                    <div class="average" th:utext="${@numberLinkController.average}">
+                    </div>
+                    <div class="userRating" th:utext="${@numberLinkController.userRating}" th:if="${username!=null}">
+                    </div>
+                </div>
+                <div class="formRating">
+                    <form action="/numberlink/setrating" method="post" th:if="${username!=null}" autocomplete="off">
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star5" value="5">
+                            <label for="star5" title = "5">&#9733;</label>
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4" title = "4">&#9733;</label>
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3" title = "3">&#9733;</label>
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2" title = "2">&#9733;</label>
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1" title = "1" >&#9733;</label>
+                        </div>
+                        <div class="btnSubmit">
+                            <input type="submit" value="Send new rating">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h3> About the game </h3>
+            <p>The puzzle grid consists of a series of differently-colored number pairs.
+            Your task is to connect each number to its match via a colored path that doesn't <ul> <li> cross any other path of </li> <li> double back on itself. </li> </ul>
+            You must also use every empty square on the grid.</p>
+            <h3> How to play? </h3>
+            <ol>
+                <li> You should be logged in. Click 'Login'. </li>
+                <li> Click any number to start drawing a path. </li>
+                <li> Click any grey tile to set your choose. </li>
+                <li> If you want play a new game, click 'New game' </li>
+            </ol>
+        </div>
+        <div class="comments">
+            <form action="/numberlink/mycomment" method="post" th:if="${username!=null}" autocomplete="off">
+                <label for="comment"></label>
+                <input type="text" name="comment" id="comment" placeholder="Write your comment" required>
+                <div class="btnSubmit">
+                    <input type="submit" value="Send comment">
+                </div>
+            </form>
+            <div class="printComments" th:utext="${@numberLinkController.threeComments}">
+            </div>
+            <a href="/numberlink/comments" class="readComments">Read all comments</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

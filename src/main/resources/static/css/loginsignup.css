@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/backgroundLogin.jpg");
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    padding:1.6rem;
+}
+
+input[type=text], input[type=password] {
+    all: unset;
+    border: black solid 1px;
+    width: 100%;
+    padding: 1.3rem;
+    display: inline-block;
+    background: #d6d6d6;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p, .message {
+    font-size: 1.3rem;
+    color: black;
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+}
+
+.confirmBtn {
+    background: linear-gradient(45deg, #fffb0a, #51ff18);
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-flex;
+    height: 35px;
+    width: 130px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.toRegistrationsBtn {
+    background: linear-gradient(45deg, #fffb0a, #51ff18);
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.cancelBtn {
+    background-color: #b1b1b1;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 2px;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-flex;
+    height: 30px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+form {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #e6dfdf;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(15, 15, 30, 1.5);
+    width: 400px;
+    max-width: 90%;
+}

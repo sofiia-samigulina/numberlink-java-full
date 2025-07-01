@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AllComments</title>
+    <link rel="stylesheet" href="/css/comments.css">
+</head>
+<body>
+
+<div class="comments">
+    <div class="printComments" th:utext="${@commentsController.allComments}">
+    </div>
+</div>
+
+<a href="/numberlink" class="cancelBtn">Cancel</a>
+</body>
+</html>

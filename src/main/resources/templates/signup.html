@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Numberlink</title>
+    <link rel="stylesheet" href="/css/loginsignup.css">
+</head>
+<body>
+
+<div class="container">
+    <form method="post" action="/numberlink/registration" autocomplete="off">
+        <h1>Sign up</h1>
+        <p>Please, fill out this form! </p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Create a username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        <div class="buttons">
+            <button class="confirmBtn">Confirm</button>
+            <a href="/numberlink" class="cancelBtn">Cancel</a>
+        </div>
+    </form>
+    <div th:if="${error}" class="message">
+        <p th:text="${error}"></p>
+    </div>
+</div>
+
+</body>
+</html>
