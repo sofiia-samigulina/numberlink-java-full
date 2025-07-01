@@ -1,4 +1,4 @@
-This project is not licensed for public or commercial use. It is itended
+This project is not licensed for public or commercial use. It is intended
 for portfolio demonstration only. Please do not copy or reuse the code. 
 
 NumberLink is a puzzle game implemented in Java. 
